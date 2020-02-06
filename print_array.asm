@@ -18,9 +18,7 @@
 printA:
     li $t0, 0 # t0 = i = 0
 	move $t1, $a0  # address of array now saved in $t1
-	li $v0, 4
-	la $a0, contents
-	syscall 
+	
 
 
 	loop:
@@ -47,8 +45,12 @@ printA:
 	jr $ra
 
 main:
-	la $a0, myArray				# address of array in $a0
 
+	li $v0, 4
+	la $a0, contents
+	syscall 
+
+	la $a0, myArray
 	la $t0, arrayLength
 	lw $a1, 0($t0)
 
