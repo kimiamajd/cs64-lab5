@@ -10,7 +10,7 @@
 
 	arrayLength: .word 10
 
-	contents: .asciiz "The contents of the array are: \n"
+	contents: .asciiz "The contents of the array are:\n"
 
 	endline: .asciiz "\n"
 
